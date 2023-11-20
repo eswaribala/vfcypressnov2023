@@ -17,8 +17,13 @@ function closeDB(){
 
 describe('kick start with cypress test',()=>{
 
+    const logs=[]
+
+
+
     before('Visit the application',()=>{
         cy.log("Before invoked....")
+        logs.push("Before invoked....")
         startServer()
         cy.visit("http://localhost:3000")
 
@@ -26,6 +31,7 @@ describe('kick start with cypress test',()=>{
 
     beforeEach('Load the data',()=>{
         cy.log("Before Each invoked....")
+        logs.push("Before Each invoked....")
         loadDataFromDb()
     })
     afterEach('close the db',()=>{
@@ -46,5 +52,6 @@ describe('kick start with cypress test',()=>{
     after('After All Test cases executed',()=>{
         cy.log("After invoked....")
         stopServer()
+        cy.writeFile('logs.txt',logs);
     })
 })
