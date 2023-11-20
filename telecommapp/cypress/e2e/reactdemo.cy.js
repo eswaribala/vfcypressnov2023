@@ -25,7 +25,6 @@ describe('kick start with cypress test',()=>{
         logs.push("Before invoked....")
         startServer()
 
-
     })
 
     beforeEach('Load the data',()=>{
@@ -65,6 +64,8 @@ describe('kick start with cypress test',()=>{
         })
 
     })
+
+
     after('After All Test cases executed',()=>{
         cy.log("After invoked....")
         stopServer()
