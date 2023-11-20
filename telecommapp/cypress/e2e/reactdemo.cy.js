@@ -24,13 +24,14 @@ describe('kick start with cypress test',()=>{
         cy.log("Before invoked....")
         logs.push("Before invoked....")
         startServer()
-        cy.visit("http://localhost:3000")
+
 
     })
 
     beforeEach('Load the data',()=>{
         cy.log("Before Each invoked....")
         logs.push("Before Each invoked....")
+        cy.visit("http://localhost:3000")
         loadDataFromDb()
     })
     afterEach('close the db',()=>{
@@ -48,9 +49,20 @@ describe('kick start with cypress test',()=>{
 
     })
 
-    it('visit http://localhost:3000 and confirm it is running',()=>{
+    it('Test paragraph length to be 3 and\n' +
+        '            test 2nd paragraph contains postpaid',()=>{
 
         cy.log("Test Case 2 Called....")
+        cy.get('p')
+            .should('be.visible')
+            .should('have.length',3)
+
+        cy.get('p').should(($p)=>{
+            expect($p).to.have.length(3)
+        })
+        cy.get('p').should(($p)=>{
+            expect(($p).eq(1)).to.contain('Postpaid')
+        })
 
     })
     after('After All Test cases executed',()=>{
