@@ -1,0 +1,26 @@
+npm install -g cypress
+cypress open
+or
+npx cypress open
+
+React cypress
+Go to project folder
+npm install --save-dev cypress
+
+mkdir cypress
+cd cypress
+mkdir integrations
+cd integrations
+
+Go to package.json
+add the following in scripts
+"test:cypress": "cypress open",
+
+
+then run cypress test
+
+yarn test:cypress
+
+
+To run cypress test from console
+npx cypress run --browser chrome --spec './cypress/e2e/reactdemo.cy.js'
