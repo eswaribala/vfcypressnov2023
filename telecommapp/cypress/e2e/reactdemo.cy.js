@@ -26,15 +26,19 @@ describe('kick start with cypress test',()=>{
     beforeEach('Load the data',()=>{
         loadDataFromDb()
     })
+    afterEach('close the db',()=>{
+        closeDB()
+    })
     //visit http://localhost:3000 and confirm it is running
     it('visit http://localhost:3000 and confirm it is running',()=>{
 
         cy.screenshot()
     })
-    afterEach('close the db',()=>{
-        closeDB()
-    })
 
+    it('visit http://localhost:3000 and confirm it is running',()=>{
+
+        cy.screenshot()
+    })
     after('After All Test cases executed',()=>{
         stopServer()
     })
