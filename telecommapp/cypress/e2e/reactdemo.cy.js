@@ -20,7 +20,6 @@ describe('kick start with cypress test',()=>{
     const logs=[]
 
 
-
     before('Visit the application',()=>{
         cy.log("Before invoked....")
         logs.push("Before invoked....")
@@ -39,15 +38,20 @@ describe('kick start with cypress test',()=>{
         closeDB()
     })
     //visit http://localhost:3000 and confirm it is running
-    it('visit http://localhost:3000 and confirm it is running',()=>{
-        cy.log("Test Case 1 called....")
-        cy.screenshot()
+    it('Test h1 has text or contains text as Vodafone Recharge',()=>{
+        cy.log("Test Case h1 called....")
+        //cy.screenshot()
+         cy.get('h1')
+             .should('exist')
+             .should('be.visible')
+             .should('contain','Vodafone Recharge')
+
     })
 
     it('visit http://localhost:3000 and confirm it is running',()=>{
 
         cy.log("Test Case 2 Called....")
-        cy.screenshot()
+
     })
     after('After All Test cases executed',()=>{
         cy.log("After invoked....")
