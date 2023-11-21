@@ -28,7 +28,15 @@ describe('Telecom Project E2E Tests',()=>{
         cy.get("input[id='telephoneno']").should('be.visible').type("995032862")
         cy.get("#main > div > form > div > div:nth-child(9) > ul > li:nth-child(1) > input[type=submit]")
             .click({force:true})
-        cy.xpath("//*[@id=\"main\"]/div/div/table/tbody/tr[1]/td[2]/h3")
+        cy.xpath("//*[@id=\"main\"]/div/div/table/tbody/tr[1]/td[2]/h3").then(($h3)=>{
+            return $h3.text()
+        }).as('customerId')
+    })
+
+    it('uses customerId',()=>{
+        cy.get('@customerId').then((customerId)=>{
+          cy.log(customerId.toString())
+        })
     })
 
 })
