@@ -1,0 +1,26 @@
+{
+  "data":[
+    {
+      "firstName": "Parameswari",
+      "lastName": "Bala",
+      "email": "Parameswaribala@gmail.com",
+      "mobileNo": 9952032862,
+      "address": "Chennai"
+    },
+    {
+      "firstName": "Sangamitra",
+      "lastName": "Gupta",
+      "email": "sangam@gmail.com",
+      "mobileNo": 9952032861,
+      "address": "Bangalore"
+    },
+    {
+      "firstName": "Pallavi",
+      "lastName": "Singh",
+      "email": "Pallavi@gmail.com",
+      "mobileNo": 9952032863,
+      "address": "Pune"
+    }
+  ]
+}
+
