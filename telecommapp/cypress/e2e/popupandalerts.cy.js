@@ -6,11 +6,11 @@ describe('Test Popup and Alerts',()=>{
     });
 
     it('close alert popup',()=>{
-        cy.visit("https://chercher.tech/practice/popups")
-        cy.get("[name='alert']")
+        cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
         cy.on('window:alert',($str)=>{
-            expect($str).toEqual('I am alert from window')
-            cy.get("[name='alert']").click()
+
+            expect($str).to.eq('I am a JS Alert')
+            cy.contains("Click for JS Alert").click()
         })
     })
 
