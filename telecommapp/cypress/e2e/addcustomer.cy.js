@@ -17,7 +17,11 @@ describe('Telecom Project E2E Tests',()=>{
             .click({force:true})
         cy.get("input[id='fname']").should('be.visible').type("Parameswari")
         cy.get("input[id='lname']").should('be.visible').type("Bala")
-
+        cy.get("input[id='email']").should('be.visible').type("parameswaribala@gmail.com")
+        cy.get("textarea[id='message']").should('be.visible').type("Chennai")
+        cy.get("input[id='telephoneno']").should('be.visible').type("995032862")
+        cy.get("#main > div > form > div > div:nth-child(9) > ul > li:nth-child(1) > input[type=submit]")
+            .click({force:true})
     })
 
 })
