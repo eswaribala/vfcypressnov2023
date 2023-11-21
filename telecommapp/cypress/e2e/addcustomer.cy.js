@@ -15,6 +15,7 @@ describe('Telecom Project E2E Tests',()=>{
         cy.visit('https://demo.guru99.com/telecom/addcustomer.php')
         cy.get("#done").should('have.css','opacity','0')
             .click({force:true})
+        cy.get("input[id='fname']").should('be.visible').type("Parameswari")
 
 
     })
