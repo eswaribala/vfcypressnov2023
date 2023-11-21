@@ -6,8 +6,10 @@ describe('Test Popup and Alerts',()=>{
     });
 
     it('close alert popup',()=>{
+        cy.visit("https://chercher.tech/practice/popups")
+        cy.get("[name='alert']")
         cy.on('window:alert',($str)=>{
-            expect($str).toEqual('I am alert')
+            expect($str).toEqual('I am alert from window')
             cy.get("[name='alert']").click()
         })
     })
