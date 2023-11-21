@@ -1,3 +1,4 @@
+import "cypress-xpath"
 //step1
 describe('Telecom Project E2E Tests',()=>{
 
@@ -27,6 +28,7 @@ describe('Telecom Project E2E Tests',()=>{
         cy.get("input[id='telephoneno']").should('be.visible').type("995032862")
         cy.get("#main > div > form > div > div:nth-child(9) > ul > li:nth-child(1) > input[type=submit]")
             .click({force:true})
+        cy.xpath("//*[@id=\"main\"]/div/div/table/tbody/tr[1]/td[2]/h3")
     })
 
 })
