@@ -10,8 +10,9 @@ describe('Test Popup and Alerts',()=>{
         cy.on('window:alert',($str)=>{
 
             expect($str).to.eq('I am a JS Alert')
-            cy.contains("Click for JS Alert").click()
+
         })
+        cy.contains("Click for JS Alert").click()
     })
 
 
