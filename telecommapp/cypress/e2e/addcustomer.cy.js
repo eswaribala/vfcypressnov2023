@@ -11,6 +11,11 @@ describe('Telecom Project E2E Tests',()=>{
            .click()
     })
 
+    it('Fill the customer Form',()=>{
+        cy.visit('https://demo.guru99.com/telecom/addcustomer.php')
+        cy.get("#done").should('be.visible').check()
+
+    })
 
 })
 
