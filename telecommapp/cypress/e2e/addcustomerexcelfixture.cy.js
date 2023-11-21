@@ -26,7 +26,7 @@ describe('Read Data from Excel File',()=>{
         cy.fixture('xlsxData').then((data) => {
             for (let i = 0; i < rowLength; i++) {
                for(let j=1;j<data.rows[i].data.length;j++) {
-                  for(let k=0;k<5;k++) {
+                  for(let k=0;k<data.rows[i].data[j].length;k++) {
                       cy.log("Data", data.rows[i].data[j][k]);
                   }
                }
