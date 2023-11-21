@@ -6,7 +6,12 @@ describe('Telecom Project E2E Tests',()=>{
 // returning false here prevents Cypress from // failing the test
         return false
     });
-
+    before('Load the json file',()=>{
+        cy.fixture('customer').then(function (customer) {
+            cy.log(customer)
+            this.testdata = customer
+        })
+    })
 
     beforeEach('visit telecom project',()=>{
         cy.visit('https://demo.guru99.com/telecom/index.html')
@@ -20,9 +25,7 @@ describe('Telecom Project E2E Tests',()=>{
 
     it('Fill the customer Form',()=>{
         cy.visit('https://demo.guru99.com/telecom/addcustomer.php')
-        cy.fixture('customer').then(function (testdata) {
-            this.testdata = testdata
-        })
+
         cy.get("#done").should('have.css','opacity','0')
             .click({force:true})
         cy.get("input[id='fname']").should('be.visible').type(this.testdata.firstName)
