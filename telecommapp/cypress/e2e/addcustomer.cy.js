@@ -16,7 +16,7 @@ describe('Telecom Project E2E Tests',()=>{
         cy.get("#done").should('have.css','opacity','0')
             .click({force:true})
         cy.get("input[id='fname']").should('be.visible').type("Parameswari")
-
+        cy.get("input[id='lname']").should('be.visible').type("Bala")
 
     })
 
