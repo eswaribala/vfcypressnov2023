@@ -31,13 +31,12 @@ describe('Telecom Project E2E Tests',()=>{
         cy.xpath("//*[@id=\"main\"]/div/div/table/tbody/tr[1]/td[2]/h3").then(($h3)=>{
             return $h3.text()
         }).as('customerId')
-    })
-
-    it('uses customerId',()=>{
         cy.get('@customerId').then((customerId)=>{
-          cy.log(customerId.toString())
+            cy.log(customerId.toString())
         })
     })
+
+    
 
 })
 
