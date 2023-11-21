@@ -7,7 +7,9 @@ describe('Iframe Content Test',()=>{
         cy.visit('https://jqueryui.com/draggable/')
         cy.frameLoaded(".demo-frame")
         cy.iframe().find("#draggable").then(($div)=>{
-            expect(($div)).to.contain('Drag me around')
+            let fmtText=$div.text()
+            expect((fmtText)).to.contain('Drag me around')
+            cy.log(fmtText)
         })
 
     })
