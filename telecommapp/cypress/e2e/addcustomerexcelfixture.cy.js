@@ -1,13 +1,12 @@
 describe('Read Data from Excel File',()=>{
    let rowLength
 
-    before('Load and Parse Excel Sheet',()=>{
-        cy.task(('parseXlsx',{ filePath: 'cypress/fixtures/customer.xlsx'}),(rows)=>{
-               rowLength=rows.length;
-
+    before(() => {
+        cy.task('parseXlsx', { filePath: 'cypress/fixtures/customer.xlsx'}).then((rows) => {
+            rowLength = rows.length;
             cy.writeFile("cypress/fixtures/xlsxData.json", { rows })
         })
-
+        // cy.visit(Cypress.config('baseUrl'));
     })
 
     beforeEach('visit telecom project',()=>{
