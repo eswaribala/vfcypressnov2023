@@ -13,7 +13,9 @@ describe('Telecom Project E2E Tests',()=>{
 
     it('Fill the customer Form',()=>{
         cy.visit('https://demo.guru99.com/telecom/addcustomer.php')
-        cy.get("#done").should('have.css','opacity','0').check()
+        cy.get("#done").should('have.css','opacity','0')
+            .click({force:true})
+
 
     })
 
