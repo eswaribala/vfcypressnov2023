@@ -1,0 +1,19 @@
+{
+  "title": "Mrs",
+"firstName": "Parameswari",
+"surName": "Bala",
+"email": "Parameswaribala@gmail.com",
+  "mobileNo": 9952032862,
+  "address": "Veb Sai Villa",
+  "year": 1970,
+  "month": "december",
+  "day": 2,
+  "type": "full",
+  "licensePeriod": 2,
+  "occupation": "Teacher",
+  "city": "Chennai",
+  "country": "India",
+  "postalCode": 602024,
+  "password": "Test@123",
+  "confirmPassword": "Test@123"
+}
