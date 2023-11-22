@@ -25,6 +25,9 @@ describe('Signup and Login Insurance Project',()=>{
         basePage.launchRegistrationPage()
         signUpPage.register(testData)
     })
-
+    it('Launch the Insurance Project and Login',()=>{
+        basePage.launchInsuranceProject()
+        loginPage.login(testData)
+    })
 
 })
