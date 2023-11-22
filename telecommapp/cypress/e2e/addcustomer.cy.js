@@ -2,8 +2,6 @@ import "cypress-xpath"
 //step1
 describe('Telecom Project E2E Tests',()=>{
 
-
-
     Cypress.on('uncaught:exception', (err, runnable) => {
 // returning false here prevents Cypress from // failing the test
         return false
