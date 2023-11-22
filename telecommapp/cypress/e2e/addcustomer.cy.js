@@ -18,6 +18,7 @@ describe('Telecom Project E2E Tests',()=>{
     })
 
     it('Fill the customer Form',()=>{
+        //refer support command.js for custom command
          cy.addCustomer();
     })
 
