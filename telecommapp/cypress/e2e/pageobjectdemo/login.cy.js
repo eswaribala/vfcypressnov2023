@@ -20,8 +20,10 @@ describe('Signup and Login Insurance Project',()=>{
         })
     })
 
-    it('Launch the Insurance Project',()=>{
+    it('Launch the Insurance Project and Register',()=>{
         basePage.launchInsuranceProject()
+        basePage.launchRegistrationPage()
+        signUpPage.register(testData)
     })
 
 
