@@ -1,8 +1,6 @@
 import {BasePage} from "./BasePage";
 import {LoginPage} from "./LoginPage";
 import {SignUpPage} from "./SignUpPage";
-
-
 const basePage=new BasePage()
 const loginPage=new LoginPage()
 const signUpPage=new SignUpPage()
@@ -15,7 +13,6 @@ describe('Signup and Login Insurance Project',()=>{
     });
     before('Load the json file',()=>{
         cy.fixture('policyholder').then(function (policyholder) {
-
             testData = policyholder
         })
     })
